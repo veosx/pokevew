@@ -5,9 +5,9 @@ title: Home
 
 <style>
   :root {
-    --pv-bg: #dceaf4;
-    --pv-surface: rgba(255, 255, 255, .86);
-    --pv-surface-soft: rgba(219, 238, 247, .82);
+    --pv-bg: #cbddeb;
+    --pv-surface: rgba(249, 253, 255, .86);
+    --pv-surface-soft: rgba(207, 229, 242, .84);
     --pv-ink: #17212b;
     --pv-muted: #617080;
     --pv-line: #dbe3ea;
@@ -34,8 +34,8 @@ title: Home
   body {
     background:
       radial-gradient(circle at top left, rgba(44, 134, 255, .18), transparent 34rem),
-      radial-gradient(circle at top right, rgba(32, 216, 255, .14), transparent 30rem),
-      linear-gradient(180deg, #f5fbff 0%, #eaf5fa 40%, var(--pv-bg) 100%);
+      radial-gradient(circle at top right, rgba(32, 216, 255, .16), transparent 30rem),
+      linear-gradient(180deg, #edf7ff 0%, #dcecf6 42%, var(--pv-bg) 100%);
   }
 
   body.pv-dark {
@@ -173,8 +173,8 @@ title: Home
 
   .pv-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 360px;
-    gap: 42px;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 34px;
     align-items: start;
   }
 
@@ -283,11 +283,11 @@ title: Home
     position: sticky;
     top: 18px;
     display: grid;
-    gap: 20px;
+    gap: 16px;
   }
 
   .pv-widget {
-    padding: 20px;
+    padding: 16px;
     border: 1px solid var(--pv-line);
     border-radius: var(--pv-radius);
     background: var(--pv-surface);
@@ -312,14 +312,14 @@ title: Home
   .pv-widget h2 {
     margin: 0;
     color: var(--pv-ink);
-    font-size: 1.22rem;
+    font-size: 1.08rem;
     line-height: 1.15;
     font-weight: 800;
   }
 
   .pv-widget p, .pv-widget li {
     color: var(--pv-muted);
-    font-size: .94rem;
+    font-size: .88rem;
     font-weight: 600;
     line-height: 1.55;
   }
