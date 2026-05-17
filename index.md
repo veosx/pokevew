@@ -46,7 +46,7 @@ title: Home
   }
 
   .pv-wrap {
-    width: min(1320px, calc(100% - 40px));
+    width: min(1400px, calc(100% - 32px));
     max-width: none;
     margin: 0 auto;
     color: var(--pv-ink);
@@ -173,8 +173,8 @@ title: Home
 
   .pv-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 300px;
-    gap: 34px;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 24px;
     align-items: start;
   }
 
