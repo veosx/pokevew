@@ -5,9 +5,9 @@ title: Home
 
 <style>
   :root {
-    --pv-bg: #f3fbf8;
-    --pv-surface: rgba(255, 255, 255, .84);
-    --pv-surface-soft: rgba(221, 246, 237, .78);
+    --pv-bg: #dceaf4;
+    --pv-surface: rgba(255, 255, 255, .86);
+    --pv-surface-soft: rgba(219, 238, 247, .82);
     --pv-ink: #17212b;
     --pv-muted: #617080;
     --pv-line: #dbe3ea;
@@ -20,9 +20,9 @@ title: Home
   }
 
   body.pv-dark {
-    --pv-bg: #071018;
-    --pv-surface: rgba(15, 28, 39, .86);
-    --pv-surface-soft: rgba(38, 72, 84, .72);
+    --pv-bg: #101f2b;
+    --pv-surface: rgba(18, 34, 47, .86);
+    --pv-surface-soft: rgba(44, 73, 91, .72);
     --pv-ink: #eef8ff;
     --pv-muted: #a9bdc9;
     --pv-line: rgba(170, 210, 225, .18);
@@ -33,13 +33,21 @@ title: Home
 
   body {
     background:
-      radial-gradient(circle at top left, rgba(31, 143, 117, .16), transparent 34rem),
-      radial-gradient(circle at top right, rgba(255, 203, 71, .16), transparent 28rem),
-      linear-gradient(180deg, #fbfffd 0%, var(--pv-bg) 34rem);
+      radial-gradient(circle at top left, rgba(44, 134, 255, .18), transparent 34rem),
+      radial-gradient(circle at top right, rgba(32, 216, 255, .14), transparent 30rem),
+      linear-gradient(180deg, #f5fbff 0%, #eaf5fa 40%, var(--pv-bg) 100%);
+  }
+
+  body.pv-dark {
+    background:
+      radial-gradient(circle at top left, rgba(44, 134, 255, .14), transparent 32rem),
+      radial-gradient(circle at top right, rgba(69, 212, 189, .1), transparent 28rem),
+      linear-gradient(180deg, #132838 0%, #101f2b 54%, #0d1a24 100%);
   }
 
   .pv-wrap {
-    max-width: 1180px;
+    width: min(1320px, calc(100% - 40px));
+    max-width: none;
     margin: 0 auto;
     color: var(--pv-ink);
     font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -142,7 +150,7 @@ title: Home
     padding: 0 16px;
     border: 1px solid var(--pv-line);
     border-radius: var(--pv-radius);
-    background: rgba(248, 255, 252, .72);
+    background: var(--pv-surface);
     color: var(--pv-muted);
     font-size: .92rem;
     font-weight: 700;
@@ -165,14 +173,14 @@ title: Home
 
   .pv-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 320px;
-    gap: 30px;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 42px;
     align-items: start;
   }
 
   .pv-feed {
     display: grid;
-    gap: 18px;
+    gap: 22px;
   }
 
   .pv-card {
@@ -181,19 +189,19 @@ title: Home
       linear-gradient(135deg, rgba(44, 134, 255, .95), rgba(32, 216, 255, .64), rgba(138, 244, 223, .7), rgba(255, 255, 255, .72)) border-box;
     border: 1px solid transparent;
     border-radius: var(--pv-radius);
-    box-shadow: 0 16px 42px rgba(44, 134, 255, .14), 0 12px 34px rgba(24, 36, 51, .06);
+    box-shadow: 0 16px 42px rgba(44, 134, 255, .16), 0 12px 34px rgba(24, 36, 51, .06);
     overflow: hidden;
   }
 
   .pv-card-header {
-    padding: 22px 24px 8px;
+    padding: 24px 28px 10px;
   }
 
   .pv-card-header:before {
     content: "";
     display: block;
     height: 5px;
-    margin: -22px -24px 20px;
+    margin: -24px -28px 22px;
     background: linear-gradient(90deg, var(--pv-blue), var(--pv-cyan), var(--pv-brand), var(--pv-accent));
   }
 
@@ -244,7 +252,7 @@ title: Home
   }
 
   .pv-content {
-    padding: 8px 24px 24px;
+    padding: 8px 28px 28px;
     color: var(--pv-ink);
     font-size: 1rem;
     line-height: 1.75;
@@ -275,7 +283,7 @@ title: Home
     position: sticky;
     top: 18px;
     display: grid;
-    gap: 18px;
+    gap: 20px;
   }
 
   .pv-widget {
@@ -321,13 +329,14 @@ title: Home
     padding-left: 1.1rem;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1050px) {
     .pv-header { align-items: flex-start; flex-direction: column; }
     .pv-grid { grid-template-columns: 1fr; }
     .pv-side { position: static; }
   }
 
   @media (max-width: 640px) {
+    .pv-wrap { width: min(100% - 22px, 1320px); }
     .pv-card-header, .pv-content { padding-left: 16px; padding-right: 16px; }
     .pv-card-header:before { margin-left: -16px; margin-right: -16px; }
   }
